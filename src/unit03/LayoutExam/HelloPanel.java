@@ -24,5 +24,4 @@ public class HelloPanel extends JFrame {
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE); 
 		frame.setVisible(true);
 	}
-////////////////////////////////////////////////////////
 }
