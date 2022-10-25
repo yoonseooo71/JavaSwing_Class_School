@@ -31,5 +31,9 @@ public class HelloButton extends JFrame{
 		new HelloButton() ;
 		
 	}
+<<<<<<< HEAD
 
+=======
+///////////////////////////////////////////////
+>>>>>>> 6318c98c08eb4b53f7ba317dec918f358c88651a
 }
