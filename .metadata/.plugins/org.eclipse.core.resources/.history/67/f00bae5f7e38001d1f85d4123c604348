@@ -1,0 +1,15 @@
+package unit03.LayoutExam;
+import javax.swing.*;
+public class HelloGridLayout {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame frame = new JFrame() ;
+		frame.setTitle("그리드 레이아웃");
+		frame.setSize(350,200);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+}

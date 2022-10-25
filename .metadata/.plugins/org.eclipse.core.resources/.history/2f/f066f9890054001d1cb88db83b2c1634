@@ -1,0 +1,57 @@
+package unit03.event;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class CheckBoxItemEventEx extends JFrame implements ActionListener{
+	JPanel p,checks ; 
+	JCheckBox fruit1, fruit2, fruit3 ; 
+	JLabel lb,lbResult ; 
+	public CheckBoxItemEventEx() {
+		// TODO Auto-generated constructor stub
+		p = new JPanel() ; 
+		checks = new JPanel(); 
+		lb = new JLabel("사과100원 ,배 500원 , 체리 2000원 ") ;
+		lbResult = new JLabel(""); 
+		fruit1 = new JCheckBox("사과");
+		fruit2 = new JCheckBox("배");
+		fruit3 = new JCheckBox("채리");
+		p.add(lb);
+		checks.add(fruit1);
+		checks.add(fruit2);
+		checks.add(fruit3);
+		p.add(checks);
+		p.add(lbResult); 
+		add(p);
+		setTitle("텍스트 아리아 이엑스"); 
+		setSize(300,250);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+		fruit1.addActionListener(this);
+		fruit2.addActionListener(this);
+		fruit3.addActionListener(this);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new CheckBoxItemEventEx() ; 
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		int fruit1Num = 100, fruit2Num = 500, fruit3Num =2000,sum = 0 ;
+		if (e.getSource() == fruit1) { 
+			sum += fruit1Num ; 
+		}
+		if (e.getSource() == fruit2) { 
+			sum += fruit2Num ; 
+		}
+		if (e.getSource() == fruit3) { 
+			sum += fruit3Num ; 
+		}
+		lbResult.setText(sum+"");
+	}
+
+}

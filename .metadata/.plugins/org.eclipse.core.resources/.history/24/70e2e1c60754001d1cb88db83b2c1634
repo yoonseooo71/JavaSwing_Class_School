@@ -1,0 +1,38 @@
+package unit03.event;
+
+import java.awt.BorderLayout;
+
+import javax.swing.*;
+
+public class SwingCoffee extends JFrame {
+	JRadioButton rbtn1,rbtn2,rbtn3 ; 
+	ButtonGroup btng ; 
+	JTextArea ta ; 
+	SwingCoffee() {
+		setLayout(new BorderLayout());
+		btng = new ButtonGroup(); 
+		rbtn1 = new JRadioButton("¾Æ¸Þ¸®Ä«³ë");
+		rbtn2 = new JRadioButton("¶ó¶¼");
+		rbtn3 = new JRadioButton("Ä«ÇªÄ¡³ë");
+		ta = new JTextArea() ; 
+		btng.add(rbtn1);
+		btng.add(rbtn2);
+		btng.add(rbtn3);
+		JPanel p = new JPanel() ; 
+		p.add(rbtn1);
+		p.add(rbtn2);
+		p.add(rbtn3);
+		add(p,BorderLayout.NORTH);
+		add(ta,BorderLayout.CENTER);
+		setTitle("½ºÀ® Ä¿ÇÇ"); 
+		setSize(500,300);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new SwingCoffee() ; 
+	}
+
+}

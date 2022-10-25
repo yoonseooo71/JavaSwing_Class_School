@@ -1,0 +1,30 @@
+package unit03.event;
+
+import javax.swing.*;
+
+public class TextAreaEx extends JFrame {
+	TextAreaEx() {
+		JPanel p = new JPanel();
+		JLabel lb = new JLabel("입력후 엔터키를 입력하세요"); 
+		JTextField tf = new JTextField(20) ; 
+		JTextArea ta = new JTextArea("안녕하세요",10,30); 
+		JScrollPane sp = new JScrollPane(ta) ; 
+		p.add(tf);  
+		p.add(sp); 
+		add(p) ; 
+		
+		
+		
+		setTitle("텍스트 아리아 이엑스"); 
+		setSize(300,250);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new TextAreaEx() ;
+
+	}
+
+}

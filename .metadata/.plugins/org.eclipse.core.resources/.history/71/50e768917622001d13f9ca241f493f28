@@ -1,0 +1,15 @@
+package unit02.Employee;
+
+public class Employee  {
+	String no,name ; 
+	int career,salary ;
+	Employee() {} 
+	Employee(String no,String name,int career){
+		this.no = no ; 
+		this.name = name ;
+		this.career = career ; 
+	}
+void paySalary() {
+		
+	}
+}
